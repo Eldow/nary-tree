@@ -50,7 +50,6 @@ describe('wrong tags tests', () => {
   test('simple node with wrong tag', () => {
     expect(Tree.is({ ...simpleNode, tag: 'yolo' })).toBe(false);
   });
-
 })
 
 describe('wrong values tests', () => {
