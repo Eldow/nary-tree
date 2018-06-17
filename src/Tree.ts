@@ -22,5 +22,5 @@ export const Tree: t.Type<Tree> = t.recursion<Tree>('Tree', self => t.union(
       tag: t.literal('leaf'),
       value: t.string
     }))
-  ])
-)
+  ]
+))
