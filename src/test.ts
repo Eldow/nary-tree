@@ -5,7 +5,7 @@ const emptyNode = { children: [], tag: 'node' };
 const simpleNode = { children: [simpleLeaf], tag: 'node' };
 
 describe('nullity tests', () => {
-  test('null tests', () => {
+  test('null tree', () => {
     expect(Tree.is(null)).toBe(false);
   });
 
