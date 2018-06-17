@@ -27,7 +27,7 @@ const topDownThatTreeFrom = (root: mixed) => {
         root.children.forEach(child => {
           return topDownThatTreeFrom(child);
         });
-        return true;
+        return true; // remove this if empty arrays shouldn't be accepted
       }
     }
   }
