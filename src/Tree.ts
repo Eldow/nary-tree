@@ -13,8 +13,8 @@ export interface Leaf {
 
 type Tree = Node | Leaf;
 
-const checkExactObjectProperties = (o: object, array: Array<string>): Boolean =>
-  isEqual(Object.getOwnPropertyNames(o).sort(), array.sort())
+const checkExactObjectProperties = (o: object, properties: Array<string>): Boolean =>
+  isEqual(Object.getOwnPropertyNames(o).sort(), properties.sort())
 
 const topDownThatTreeFrom = (root: mixed) => {
   if (isNil(root) || typeof root !== 'object') return false;
