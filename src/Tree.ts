@@ -12,13 +12,15 @@ export interface Leaf {
 
 type Tree = Node | Leaf;
 
-export const Tree = t.recursion<Tree>('Tree', self => t.union([
-  t.exact(t.interface({
-    tag: t.literal('node'),
-    children: t.array(self)
-  })),
-  t.exact(t.interface({
-    tag: t.literal('leaf'),
-    value: t.string
-  }))])
+export const Tree: t.Type<Tree> = t.recursion<Tree>('Tree', self => t.union(
+  [
+    t.exact(t.interface({
+      tag: t.literal('node'),
+      children: t.array(self)
+    })),
+    t.exact(t.interface({
+      tag: t.literal('leaf'),
+      value: t.string
+    }))
+  ])
 )
