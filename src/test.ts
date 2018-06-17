@@ -20,11 +20,11 @@ describe('nullity tests', () => {
 
 describe('wrong props tests', () => {
   test('leaf with wrong props', () => {
-    expect(Tree.is({ ...simpleLeaf, yolo: 'swag' })).toBe(false);
+    expect(Tree.is({ ...simpleLeaf, foo: 'bar' })).toBe(false);
   });
 
   test('node with wrong props', () => {
-    expect(Tree.is({ ...simpleNode, swag: 'yolo' })).toBe(false);
+    expect(Tree.is({ ...simpleNode, bar: 'foo' })).toBe(false);
   });
 })
 
@@ -44,11 +44,11 @@ describe('right trees tests', () => {
 
 describe('wrong tags tests', () => {
   test('simple leaf with wrong tag', () => {
-    expect(Tree.is({ ...simpleLeaf, tag: 'yolo' })).toBe(false);
+    expect(Tree.is({ ...simpleLeaf, tag: 'foo' })).toBe(false);
   });
 
   test('simple node with wrong tag', () => {
-    expect(Tree.is({ ...simpleNode, tag: 'yolo' })).toBe(false);
+    expect(Tree.is({ ...simpleNode, tag: 'bar' })).toBe(false);
   });
 })
 
