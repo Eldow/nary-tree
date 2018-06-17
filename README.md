@@ -5,4 +5,4 @@ N-ary Tree Type implementation
 Run `yarn install`
 
 ## Usage
-Run `yarn test` to run the test suite
+Run `yarn test`
