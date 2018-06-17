@@ -9,11 +9,15 @@ describe('nullity tests', () => {
     expect(Tree.is(null)).toBe(false);
   });
 
-  test('null leaf', () => {
+  test('empty object', () => {
+    expect(Tree.is({})).toBe(false);
+  });
+
+  test('null leaf value', () => {
     expect(Tree.is({ ...simpleLeaf, value: null })).toBe(false);
   });
 
-  test('null node', () => {
+  test('null node children', () => {
     expect(Tree.is({ ...simpleNode, children: null })).toBe(false);
   });
 })
