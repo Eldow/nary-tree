@@ -44,25 +44,21 @@ describe('right trees tests', () => {
 
 describe('wrong tags tests', () => {
   test('simple leaf with wrong tag', () => {
-    const wrongTagLeaf = { ...simpleLeaf, tag: 'yolo' };
-    expect(Tree.is(wrongTagLeaf)).toBe(false);
+    expect(Tree.is({ ...simpleLeaf, tag: 'yolo' })).toBe(false);
   });
 
   test('simple node with wrong tag', () => {
-    const wrongTagNode = { ...simpleNode, tag: 'yolo' };
-    expect(Tree.is(wrongTagNode)).toBe(false);
+    expect(Tree.is({ ...simpleNode, tag: 'yolo' })).toBe(false);
   });
 
 })
 
 describe('wrong values tests', () => {
   test('simple leaf with wrong value', () => {
-    const wrongTypeLeaf = { ...simpleLeaf, value: 5 };
-    expect(Tree.is(wrongTypeLeaf)).toBe(false);
+    expect(Tree.is({ ...simpleLeaf, value: 5 })).toBe(false);
   });
 
   test('simple node with wrong value', () => {
-    const wrongTypeNode = { ...simpleNode, children: 42 };
-    expect(Tree.is(wrongTypeNode)).toBe(false);
+    expect(Tree.is({ ...simpleNode, children: 42 })).toBe(false);
   });
 })
